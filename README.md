@@ -29,6 +29,29 @@ In Layout Settings, you can change the Colors assigned to different Splitter sta
 * Right click on LiveSplit -> `Control` -> `Start Load Splitter` ). 
 * You **MUST** manually start it **EACH TIME** you launch LiveSplit.
 
+
+### Indication
+
+<picture>
+  <source media="(prefers-color-scheme: dark)" srcset="https://github.com/lildeadprince/LiveSplit.Destiny2.LoadSplitter/assets/56614219/e82c9580-883a-46ce-be53-ef4b4db37408">
+  <img alt="Shows Anuraghazra's GitHub Stats." src="https://github.com/lildeadprince/LiveSplit.Destiny2.LoadSplitter/assets/56614219/539ce0f7-d9c5-4db7-bdf3-5dfbb45e80fb">
+</picture>
+
+Default line indicator colors represent:
+* Gray: Load Splitter is oofline. Will not do splits. Will not wait for anything
+  * End by starting the Splitter
+* Red: Destiny 2.exe is not detected. Once in a 10s interval Splitter will check it again 
+  * Ends when Destiny 2 is detected 
+  * Ends is the Splitter is stopped
+* Amber: Destiny 2.exe process has been detected and now Splitter waits until D2 Activity starts (30K port connection established)
+  * Ends when Destiny 2 establishes connection over 30k port
+  * Ends if `Split` command has been manually sent
+  * Ends if the Splitter is stopped
+* Blue: Splitter detected activity start and sent Split command. Splitter now copmletely idle until the next run
+  * Ends when LiveSplit receives `Reset` command
+  * Ends when LiveSplit performs synthetic reset on `Split` command after run completion
+  * Ends if the Splitter is stopped
+
 ## Contacts
 
 - [@AlpenDitrix](https://discordapp.com/users/323887460813635585)
